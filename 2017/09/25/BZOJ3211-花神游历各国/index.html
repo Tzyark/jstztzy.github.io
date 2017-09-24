@@ -83,7 +83,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="jstztzy,codeforces,topcoder,acm,icpc" />
+  <meta name="keywords" content="-Data Structure -线段树," />
 
 
 
@@ -101,13 +101,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Rem&#39;s Zone">
-<meta property="og:url" content="http://jstztzy.github.io/index.html">
+<meta name="description" content="BZOJ3211: 花神游历各国题意给定$n$个数，$m$个操作，一种查询区间内所有数的和，一种将区间内所有数开根后取整。输出所有查询的结果。 题解线段树。唯一的$trick$是由于这$n$个数的范围是$[0,10^9]$，最多开$5$次根就会达到$0$，于是我们开一个$cnt$数组记录一段区间是否需要继续开根即可。 代码12345678910111213141516171819202122232">
+<meta name="keywords" content="-Data Structure -线段树">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BZOJ3211 花神游历各国">
+<meta property="og:url" content="http://jstztzy.github.io/2017/09/25/BZOJ3211-花神游历各国/index.html">
 <meta property="og:site_name" content="Rem&#39;s Zone">
+<meta property="og:description" content="BZOJ3211: 花神游历各国题意给定$n$个数，$m$个操作，一种查询区间内所有数的和，一种将区间内所有数开根后取整。输出所有查询的结果。 题解线段树。唯一的$trick$是由于这$n$个数的范围是$[0,10^9]$，最多开$5$次根就会达到$0$，于是我们开一个$cnt$数组记录一段区间是否需要继续开根即可。 代码12345678910111213141516171819202122232">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-09-24T16:21:42.109Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rem&#39;s Zone">
+<meta name="twitter:title" content="BZOJ3211 花神游历各国">
+<meta name="twitter:description" content="BZOJ3211: 花神游历各国题意给定$n$个数，$m$个操作，一种查询区间内所有数的和，一种将区间内所有数开根后取整。输出所有查询的结果。 题解线段树。唯一的$trick$是由于这$n$个数的范围是$[0,10^9]$，最多开$5$次根就会达到$0$，于是我们开一个$cnt$数组记录一段区间是否需要继续开根即可。 代码12345678910111213141516171819202122232">
 
 
 
@@ -137,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://jstztzy.github.io/"/>
+  <link rel="canonical" href="http://jstztzy.github.io/2017/09/25/BZOJ3211-花神游历各国/"/>
 
 
 
 
 
-  <title>Rem's Zone</title>
+  <title>BZOJ3211 花神游历各国 | Rem's Zone</title>
   
 
 
@@ -162,8 +167,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/jstztzy"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,147 +270,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jstztzy.github.io/2017/09/25/Codeforces-Round-432-Div-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jstztzy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rem's Zone">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/25/Codeforces-Round-432-Div-2/" itemprop="url">Codeforces Round #432(Div.2)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-25T00:17:00+08:00">
-                2017-09-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/09/25/Codeforces-Round-432-Div-2/" class="leancloud_visitors" data-flag-title="Codeforces Round #432(Div.2)">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          A. Arpa and a research in Mexican wave题意分段函数求值。
-题解$\begin{equation}  f(t)=  \begin{cases}  t&amp;,0\leq t\leq k\newline  k&amp;,k&lt; t\leq n\newline 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/25/Codeforces-Round-432-Div-2/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -436,9 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/25/BZOJ3211-花神游历各国/" itemprop="url">BZOJ3211 花神游历各国</a></h1>
+          <h1 class="post-title" itemprop="name headline">BZOJ3211 花神游历各国</h1>
         
 
         <div class="post-meta">
@@ -499,19 +363,10 @@
       
 
       
-        
-          
-          BZOJ3211: 花神游历各国题意给定$n$个数，$m$个操作，一种查询区间内所有数的和，一种将区间内所有数开根后取整。输出所有查询的结果。
-题解线段树。唯一的$trick$是由于这$n$个数的范围是$[0,10^9]$，最多开$5$次根就会达到$0$，于是我们开一个$cnt$数组记录一段区间是否
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/25/BZOJ3211-花神游历各国/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h1 id="BZOJ3211-花神游历各国"><a href="#BZOJ3211-花神游历各国" class="headerlink" title="BZOJ3211: 花神游历各国"></a><center><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=3211" target="_blank" rel="external">BZOJ3211: 花神游历各国</a></center></h1><h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>给定$n$个数，$m$个操作，一种查询区间内所有数的和，一种将区间内所有数开根后取整。输出所有查询的结果。</p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>线段树。唯一的$trick$是由于这$n$个数的范围是$[0,10^9]$，最多开$5$次根就会达到$0$，于是我们开一个$cnt$数组记录一段区间是否需要继续开根即可。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> lson root &lt;&lt; 1</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> rson root &lt;&lt; 1 | 1</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> ltree lson, l, m</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> rtree rson, m + 1, r</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1e5</span>+<span class="number">9</span>;</div><div class="line"></div><div class="line">ll data[N], sum[<span class="number">4</span> * N], cnt[<span class="number">4</span> * N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> s = <span class="number">1</span>, x = <span class="number">0</span>; <span class="keyword">char</span> ch = getchar();</div><div class="line">    <span class="keyword">while</span> (ch &lt; <span class="string">'0'</span> || ch &gt; <span class="string">'9'</span>) &#123;<span class="keyword">if</span> (ch == <span class="string">'-'</span>) s = <span class="number">-1</span>; ch = getchar();&#125;</div><div class="line">    <span class="keyword">while</span> (ch &gt;= <span class="string">'0'</span> &amp;&amp; ch &lt;= <span class="string">'9'</span>) &#123;x = x * <span class="number">10</span> + ch - <span class="string">'0'</span>; ch = getchar();&#125;</div><div class="line">    <span class="keyword">return</span> s * x;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> root, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (l == r) &#123;</div><div class="line">        sum[root] = data[l], cnt[root] = (data[l] &lt;= <span class="number">1</span>); <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> m = (l + r) &gt;&gt; <span class="number">1</span>;</div><div class="line">    build(ltree);</div><div class="line">    build(rtree);</div><div class="line">    sum[root] = sum[lson] + sum[rson];</div><div class="line">    cnt[root] = cnt[lson] + cnt[rson];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">query</span><span class="params">(<span class="keyword">int</span> root, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> ql, <span class="keyword">int</span> qr)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (ql &lt;= l &amp;&amp; r &lt;= qr) <span class="keyword">return</span> sum[root];</div><div class="line">    <span class="keyword">int</span> m = (l + r) &gt;&gt; <span class="number">1</span>;</div><div class="line">    ll ret = <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span> (ql &lt;= m) ret += query(ltree, ql, qr);</div><div class="line">    <span class="keyword">if</span> (qr &gt; m) ret += query(rtree, ql, qr);</div><div class="line">    <span class="keyword">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> root, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> ql, <span class="keyword">int</span> qr)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (cnt[root] == r - l + <span class="number">1</span>) <span class="keyword">return</span>;</div><div class="line">    <span class="keyword">if</span> (l == r) &#123;</div><div class="line">        sum[root] = (ll) <span class="built_in">sqrt</span>(sum[root]), cnt[root] = (sum[root] &lt;= <span class="number">1</span>); <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> m = (l + r) &gt;&gt; <span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span> (ql &lt;= m) update(ltree, ql, qr);</div><div class="line">    <span class="keyword">if</span> (qr &gt; m) update(rtree, ql, qr);</div><div class="line">    sum[root] = sum[lson] + sum[rson];</div><div class="line">    cnt[root] = cnt[lson] + cnt[rson];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> n = read();</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) data[i] = read();</div><div class="line">    build(<span class="number">1</span>, <span class="number">1</span>, n);</div><div class="line"></div><div class="line">    <span class="keyword">int</span> m = read();</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</div><div class="line">        <span class="keyword">int</span> x = read(), l = read(), r = read();</div><div class="line">        <span class="keyword">if</span> (x == <span class="number">1</span>) <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, query(<span class="number">1</span>, <span class="number">1</span>, n, l, r));</div><div class="line">        <span class="keyword">if</span> (x == <span class="number">2</span>) update(<span class="number">1</span>, <span class="number">1</span>, n, l, r);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -523,295 +378,61 @@
     
 
     
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    jstztzy
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="http://jstztzy.github.io/2017/09/25/BZOJ3211-花神游历各国/" title="BZOJ3211 花神游历各国">http://jstztzy.github.io/2017/09/25/BZOJ3211-花神游历各国/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jstztzy.github.io/2017/09/25/Codeforces-Round-428/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jstztzy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rem's Zone">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/25/Codeforces-Round-428/" itemprop="url">Codeforces Round #428(Div.2)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-25T00:08:51+08:00">
-                2017-09-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/Data-Structure-线段树/" rel="tag"><i class="fa fa-tag"></i> -Data Structure -线段树</a>
           
-            
-          
-
-          
-          
-             <span id="/2017/09/25/Codeforces-Round-428/" class="leancloud_visitors" data-flag-title="Codeforces Round #428(Div.2)">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          A. Arya and Bran题意已知$n$天中一个人每天获得$a_i$块糖，但最多只能拿其中8块，多余的可以以后拿。判断最早哪一天能拿到$k$块。
-题解模拟每天的情况即可。
-代码123456789101112131415161718192021#include &lt;bits/stdc++.h
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/25/Codeforces-Round-428/#more" rel="contents">
-              Read more &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/25/Codeforces-Round-428/" rel="next" title="Codeforces Round #428(Div.2)">
+                <i class="fa fa-chevron-left"></i> Codeforces Round #428(Div.2)
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jstztzy.github.io/2017/09/24/AtCoder-Regular-Contest-082/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jstztzy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rem's Zone">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/24/AtCoder-Regular-Contest-082/" itemprop="url">AtCoder Regular Contest 082</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-24T00:39:55+08:00">
-                2017-09-24
-              </time>
+              <a href="/2017/09/25/Codeforces-Round-432-Div-2/" rel="prev" title="Codeforces Round #432(Div.2)">
+                Codeforces Round #432(Div.2) <i class="fa fa-chevron-right"></i>
+              </a>
             
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/09/24/AtCoder-Regular-Contest-082/" class="leancloud_visitors" data-flag-title="AtCoder Regular Contest 082">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          C - Together题意给定$N$个数，求它们或加一或减一或不变的众数。
-题解没什么好说的。
-代码1234567891011121314151617181920#include &lt;bits/stdc++.h&gt;using namespace std;const int N = 1e5+
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/24/AtCoder-Regular-Contest-082/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -821,288 +442,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jstztzy.github.io/2017/09/24/Codeforces-Round-433/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jstztzy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rem's Zone">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/24/Codeforces-Round-433/" itemprop="url">Codeforces Round #433</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-24T00:26:14+08:00">
-                2017-09-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/09/24/Codeforces-Round-433/" class="leancloud_visitors" data-flag-title="Codeforces Round #433">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          854A. Fraction题意给定$n$，求分子分母和为$n$且分母最大的最简分数。
-题解暴力枚举。
-代码12345678910111213#include &lt;bits/stdc++.h&gt;using namespace std;inline int gcd(int a, int b) 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/24/Codeforces-Round-433/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jstztzy.github.io/2017/09/22/Educational-Codeforces-Round-28/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jstztzy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rem's Zone">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/22/Educational-Codeforces-Round-28/" itemprop="url">Educational Codeforces Round 28</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-22T18:59:00+08:00">
-                2017-09-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/09/22/Educational-Codeforces-Round-28/" class="leancloud_visitors" data-flag-title="Educational Codeforces Round 28">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          #846A. Curriculum Vitae
-##题意给定一个长度为$n$的$01$序列，删掉一些数，使得最终数列中$0$不直接跟在$1$后面，求最长长度。
-##题解最终序列一定是$000…111$形式的，$\Theta(n)$枚举最后一个$0$的位置，用前缀和$\Theta(1)$统计一下即可。
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/22/Educational-Codeforces-Round-28/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -1110,6 +454,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -1130,8 +485,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -1220,6 +584,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#BZOJ3211-花神游历各国"><span class="nav-number">1.</span> <span class="nav-text">BZOJ3211: 花神游历各国</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意"><span class="nav-number">1.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题解"><span class="nav-number">1.2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">1.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1376,6 +756,18 @@
 
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://jstztzy.github.io/2017/09/25/BZOJ3211-花神游历各国/';
+          this.page.identifier = '2017/09/25/BZOJ3211-花神游历各国/';
+          this.page.title = 'BZOJ3211 花神游历各国';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
