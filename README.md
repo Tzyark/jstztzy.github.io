@@ -4,5 +4,4 @@ My personal blog hosted on GitHub.
 - My solutions to some contests on **OnlineJudge** like [CodeForces](codeforces.com), [AtCoder](atcoder.jp), [TopCoder](https://www.topcoder.com) and so on  
 - My solutions to some interesting **algorithm & math** problems on [Project Euler](https://projecteuler.net/archives)  
 - Diaries about my **life & study**.  
-- 
 Hope you a good journey here :)
