@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://jstztzy.github.io/"/>
-  <updated>2017-09-24T16:29:34.048Z</updated>
+  <updated>2017-09-28T02:59:58.380Z</updated>
   <id>http://jstztzy.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>My Project-Euler Solutions</title>
+    <link href="http://jstztzy.github.io/2017/09/28/My-Project-Euler-Solutions-till-25/"/>
+    <id>http://jstztzy.github.io/2017/09/28/My-Project-Euler-Solutions-till-25/</id>
+    <published>2017-09-28T02:58:48.000Z</published>
+    <updated>2017-09-28T02:59:58.380Z</updated>
+    
+    <content type="html"><![CDATA[<p>updating…</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;updating…&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="Project-Euler" scheme="http://jstztzy.github.io/tags/Project-Euler/"/>
+    
+      <category term="Math" scheme="http://jstztzy.github.io/tags/Math/"/>
+    
+  </entry>
   
   <entry>
     <title>2017 ACM/ICPC Asia Regional Urumqi Online（B D待补）</title>
