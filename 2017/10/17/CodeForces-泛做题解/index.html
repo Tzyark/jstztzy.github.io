@@ -83,7 +83,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="jstztzy,codeforces,topcoder,acm,icpc" />
+  <meta name="keywords" content="CodeForces," />
 
 
 
@@ -101,13 +101,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Rem&#39;s Zone">
-<meta property="og:url" content="http://jstztzy.github.io/tags/线性基/index.html">
+<meta name="description" content="Codeforces Round #441876A 考虑在哪条边上来回走。876B 考虑$\mod m$的同余系。875A 九位数的数位和$\leq 81$。875B 考虑到最右边的$X$不影响结果，每一位左边$X$的数量$+1$即为答案。875C TODO 考虑相邻两个串只有第一个不相同位会影响两者大小，进而问题转化为：每个串的这些位选择大写/小写的一种方案，是否满足大小关系限制条件，即为$2-">
+<meta name="keywords" content="CodeForces">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CodeForces 泛做题解">
+<meta property="og:url" content="http://jstztzy.github.io/2017/10/17/CodeForces-泛做题解/index.html">
 <meta property="og:site_name" content="Rem&#39;s Zone">
+<meta property="og:description" content="Codeforces Round #441876A 考虑在哪条边上来回走。876B 考虑$\mod m$的同余系。875A 九位数的数位和$\leq 81$。875B 考虑到最右边的$X$不影响结果，每一位左边$X$的数量$+1$即为答案。875C TODO 考虑相邻两个串只有第一个不相同位会影响两者大小，进而问题转化为：每个串的这些位选择大写/小写的一种方案，是否满足大小关系限制条件，即为$2-">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-10-17T07:44:07.245Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rem&#39;s Zone">
+<meta name="twitter:title" content="CodeForces 泛做题解">
+<meta name="twitter:description" content="Codeforces Round #441876A 考虑在哪条边上来回走。876B 考虑$\mod m$的同余系。875A 九位数的数位和$\leq 81$。875B 考虑到最右边的$X$不影响结果，每一位左边$X$的数量$+1$即为答案。875C TODO 考虑相邻两个串只有第一个不相同位会影响两者大小，进而问题转化为：每个串的这些位选择大写/小写的一种方案，是否满足大小关系限制条件，即为$2-">
 
 
 
@@ -137,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://jstztzy.github.io/tags/线性基/"/>
+  <link rel="canonical" href="http://jstztzy.github.io/2017/10/17/CodeForces-泛做题解/"/>
 
 
 
 
 
-  <title>Tag: 线性基 | Rem's Zone</title>
+  <title>CodeForces 泛做题解 | Rem's Zone</title>
   
 
 
@@ -162,7 +167,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/jstztzy"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,54 +271,177 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>线性基<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://jstztzy.github.io/2017/10/17/CodeForces-泛做题解/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jstztzy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rem's Zone">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/09/25/线性基学习笔记/" itemprop="url">
-              
-                <span itemprop="name">线性基学习笔记</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">CodeForces 泛做题解</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-25T00:24:58+08:00"
-              content="2017-09-25" >
-          09-25
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-17T14:26:54+08:00">
+                2017-10-17
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/10/17/CodeForces-泛做题解/" class="leancloud_visitors" data-flag-title="CodeForces 泛做题解">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Codeforces-Round-441"><a href="#Codeforces-Round-441" class="headerlink" title="Codeforces Round #441"></a>Codeforces Round #441</h1><p><strong><a href="http://codeforces.com/contest/876/problem/A" target="_blank" rel="external">876A</a></strong> 考虑在哪条边上来回走。<br><strong><a href="http://codeforces.com/contest/876/problem/B" target="_blank" rel="external">876B</a></strong> 考虑$\mod m$的同余系。<br><strong><a href="http://codeforces.com/contest/875/problem/A" target="_blank" rel="external">875A</a></strong> 九位数的数位和$\leq 81$。<br><strong><a href="http://codeforces.com/contest/875/problem/B" target="_blank" rel="external">875B</a></strong> 考虑到最右边的$X$不影响结果，每一位左边$X$的数量$+1$即为答案。<br><strong><a href="http://codeforces.com/contest/875/problem/C" target="_blank" rel="external">875C</a></strong> <strong>TODO</strong> 考虑相邻两个串只有第一个不相同位会影响两者大小，进而问题转化为：每个串的这些位选择大写/小写的一种方案，是否满足大小关系限制条件，即为$2-SAT$问题。<br><strong><a href="http://codeforces.com/contest/875/problem/D" target="_blank" rel="external">875D</a></strong> <strong>TODO</strong> 对第$i$个数考虑它贡献的不合法区间（对每个二进制位分别求）。设$l_i,r_i$分别为该区间的两个端点，则$res=\frac{n(n+1)}{2}-\sum^{i=1}_n{(i-l_i)(r_i-i)}$。<br><strong><a href="http://codeforces.com/contest/875/problem/E" target="_blank" rel="external">875E</a></strong> <strong>TODO</strong> 。<br><strong><a href="http://codeforces.com/contest/875/problem/F" target="_blank" rel="external">875F</a></strong> <strong>TODO</strong> 并查集。</p>
+<h1 id="Codeforces-Round-440"><a href="#Codeforces-Round-440" class="headerlink" title="Codeforces Round #440"></a>Codeforces Round #440</h1><p><strong><a href="http://codeforces.com/contest/872/problem/A" target="_blank" rel="external">872A</a></strong> 先考虑一位数。<br><strong><a href="http://codeforces.com/contest/872/problem/B" target="_blank" rel="external">872B</a></strong> 考虑对$k$分类$k=1,k=2,k&gt;=3$。<br><strong><a href="http://codeforces.com/contest/871/problem/A" target="_blank" rel="external">871A</a></strong> $4$是最小的合数，考虑对$n%4$分类，贪心地取。<br><strong><a href="http://codeforces.com/contest/871/problem/B" target="_blank" rel="external">871B</a></strong> <strong>TODO</strong> 交互题。<br><strong><a href="http://codeforces.com/contest/871/problem/C" target="_blank" rel="external">871C</a></strong> 考虑构造二维点和行/列向量构成的二部图，并查集维护每个连通块分别求然后累积。容易证明每个连通块总有：$n<em>{二维点}\geq n</em>{行/列向量}-1$。上式取等号时（考虑一个$W$形的二部图），答案为$2^{n<em>{行/列向量}}-1$；否则答案为$2^{n</em>{行/列向量}}$。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    jstztzy
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="http://jstztzy.github.io/2017/10/17/CodeForces-泛做题解/" title="CodeForces 泛做题解">http://jstztzy.github.io/2017/10/17/CodeForces-泛做题解/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CodeForces/" rel="tag"><i class="fa fa-tag"></i> CodeForces</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/12/CCPC2016-Hefei-Onsite/" rel="next" title="CCPC2016 Hefei Onsite">
+                <i class="fa fa-chevron-left"></i> CCPC2016 Hefei Onsite
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -321,6 +449,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -341,8 +480,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -434,6 +582,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Codeforces-Round-441"><span class="nav-number">1.</span> <span class="nav-text">Codeforces Round #441</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Codeforces-Round-440"><span class="nav-number">2.</span> <span class="nav-text">Codeforces Round #440</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -590,6 +754,18 @@
 
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://jstztzy.github.io/2017/10/17/CodeForces-泛做题解/';
+          this.page.identifier = '2017/10/17/CodeForces-泛做题解/';
+          this.page.title = 'CodeForces 泛做题解';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
