@@ -5,6 +5,6 @@ Here you can find:
 * My university life with ups and downs.  
 
 
-The blog is powered by [Hexo](https://hexo.io/).  
+The blog is powered by [Hexo](https://hexo.io/) hosted on my GitHub repository.  
 COPYRIGHT NOTICE: All articles in this blog are licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) unless stating additionally.
 
